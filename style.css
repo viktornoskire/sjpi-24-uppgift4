@@ -1,0 +1,53 @@
+body
+{
+    background-color:rgb(227, 200, 255);
+}
+
+#header 
+{
+    color: darkblue;
+    margin-left: 70px;
+    font:icon;
+}
+
+.completed 
+{
+    color:grey; 
+    text-decoration: line-through;
+}
+
+.removeBtn
+{
+    color: rgb(0, 0, 0);
+    margin-bottom: 3px;
+    cursor:pointer;
+    border-style: none;
+    background-color: rgb(227, 200, 255);
+
+}
+
+#addToListDiv
+{
+    margin-bottom: 10px;
+    font:caption;
+}
+
+#addTask
+{
+    background-color: rgb(209, 165, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+#listDiv 
+{
+    border-style: groove;
+    border-color:gray;
+    border-width: 1px;
+    cursor:default;
+    font:message-box;
+}
+
+
