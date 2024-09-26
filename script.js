@@ -10,7 +10,7 @@ const todoArray = [];
 const addBtn = document.querySelector("#addTask");
 const myInput = document.querySelector("#myInput");
 const taskList = document.querySelector('#taskList');
-const counter = document.querySelector('#countToDo')
+const countToDo = document.querySelector('#countToDo')
 const infoText = document.querySelector('#infoText')
 
 
@@ -33,11 +33,13 @@ function searchIndex(removedItem) {
     return index;
 }
 
+
+
 // The event listener on the addBtn
 addBtn.addEventListener(
     "click",
     function () {
-        const text = myInput.value; // declaring a variable with the value of myInput
+        let text = myInput.value; // declaring a variable with the value of myInput
 
         // test if the user have written anything
         if (text == "") {
@@ -70,17 +72,15 @@ addBtn.addEventListener(
                 removeBtn.addEventListener(
                     "click",
                     function () {
+                        let removeItem = searchIndex(text);
+                        todoArray.splice(removeItem, 1);
+                        console.log(todoArray);
                         taskList.removeChild(listItem);
-                        // if completed count is more than 0 then the counter goes down. 
-                        // then using my searchIndex-function to remove object in todoArray
-                        if (completedCount > 0) {
+                        if (completedCount > 0 && listItem.getAttribute("class") == "completed") {
                             completedCount--;
-                            let removeItem = searchIndex(text);
-                            todoArray.splice(removeItem, 1);
-                            console.log(todoArray);
                         }
 
-                        counter.textContent = `${completedCount} completed`;
+                        countToDo.textContent = `${completedCount} completed`;
                     }
                 )
 
@@ -97,7 +97,7 @@ addBtn.addEventListener(
                         changeStatus(itemLabel.textContent, true);
 
                     }
-                    counter.textContent = `${completedCount} completed`;
+                    countToDo.textContent = `${completedCount} completed`;
 
 
                 })
