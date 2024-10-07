@@ -11,27 +11,21 @@
 </head>
 
 <body>
-    <div id="header">
-        <h1>My ToDo-List</h1>
-    </div>
+    <main>
+        <div class="todo-list">
+            <h1>Todo-List</h1>
+            <label for="addToList">Enter task:</label>
+            <input type="text" id="myInput" placeholder="task..." name="addToList">
+            <button type="button" id="addTask">Add</button>
+            <p id="infoText"></p>
+            <div class="taskList">
+                <ul id="taskList">
+                </ul>
+            </div>
+            
+            <small id="countToDo">0 Completed</small>
 
-
-
-    <div id="addToListDiv">
-        <label for="addToList">Enter your task:</label>
-        <input type="text" id="myInput" placeholder="task..." name="addToList">
-        <button type="button" id="addTask">Add Task</button>
-    </div>
-
-    <small id="infoText"></small>
-
-    <div id="listDiv">
-        <ul id="taskList">
-        </ul>
-        <small id="countToDo">0 Completed</small>
-    </div>
-
-
+    </main>
     <script src='script.js'></script>
 </body>
 
