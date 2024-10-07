@@ -1,57 +1,75 @@
-body
-{
-    background-color:rgb(227, 200, 255);
+body {
+    background-image: url(https://cbx-prod.b-cdn.net/COLOURBOX47415569.jpg?width=400&height=400&quality=70);
 }
 
-#header 
-{
-    color: darkblue;
-    margin-left: 70px;
-    font:icon;
+.todo-list {
+    background-color:rgba(255, 182, 191, 0.952);
+    padding-bottom: 10px;
+    max-width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 35px;
+    border: 2px double black;
+    /* text-shadow: 0.5px 0.5px rgba(222, 222, 255, 0.664); */
+    font-family:'Courier New', Courier, monospace
 }
 
-.completed 
-{
-    color:grey; 
+
+.taskList {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.completed .listItem{
+    color:grey;
     text-decoration: line-through;
 }
 
-.removeBtn
-{
-    color: rgb(0, 0, 0);
-    margin-bottom: 3px;
-    cursor:pointer;
-    border-style: none;
-    background-color: rgb(227, 200, 255);
-
-}
-
-#addToListDiv
-{
-    margin-bottom: 10px;
-    font:caption;
-}
-
-#addTask
-{
-    background-color: rgb(209, 165, 255);
-    border-style: solid;
-    border-width: 1px;
+.listItem {
+    display: inline-block;
+    text-align: left;
+    /* border: 1px solid black; */
+    width: 95%;
+    cursor: pointer;
+    transition: background-color 0.5s;
     border-radius: 5px;
-    cursor:pointer;
 }
 
-#myInput
-{
-    font-family: 'Courier New', Courier, monospace;
+.removeBtn {
+    display: inline-block;
+    text-align: right;
+    /* border: 1px solid black; */
+    width: auto;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border-radius: 2px;
 }
 
-#listDiv 
-{
-    border-style: groove;
-    border-color:gray;
-    border-width: 1px;
-    cursor:default;
+ul#taskList {
+    list-style-type: circle;
+}
+.listItem:hover {
+    background-color: rgba(255, 169, 179, 0.952);
+    border-radius: 5px;
 }
 
+.removeBtn:hover {
+    background-color: rgba(255, 169, 179, 0.952);
+    border-radius: 3px;
+}
 
+.removed {
+    transition: opacity 0.5s;
+    opacity: 0%;    
+}
+
+#infoText {
+    font-size: 10px;
+    padding:0px;
+    margin: 0px;
+}
