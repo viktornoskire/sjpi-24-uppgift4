@@ -59,12 +59,14 @@ addBtn.addEventListener(
                 taskList.appendChild(listItem);
                 // Declaring a span and the textContent is the text-variable, then appending that to the li-element
                 const itemLabel = document.createElement('span');
+                itemLabel.setAttribute('class', 'listItem')
                 itemLabel.textContent = text;
                 listItem.appendChild(itemLabel);
 
                 // Create button for removing list item
-                const removeBtn = document.createElement('button');
-                removeBtn.innerHTML = "&#x1F5D1;";
+                const removeBtn = document.createElement('span');
+                // removeBtn.innerHTML = "&#x1F5D1;";
+                removeBtn.innerHTML = "&#9932;";
                 removeBtn.setAttribute("class", 'removeBtn');
                 listItem.appendChild(removeBtn);
 
